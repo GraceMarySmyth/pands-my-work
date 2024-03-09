@@ -1,3 +1,8 @@
+# testing types
+# This is part one of the lab that tests types
+# Author: Grace Mary Smyth
+
+
 i = 3
 fl = 3.5
 isa = True
