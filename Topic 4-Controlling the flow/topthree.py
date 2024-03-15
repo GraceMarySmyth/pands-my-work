@@ -17,8 +17,8 @@ for i in range(0, howmany):
     numbers.append(random.randint(rangefrom,rangeto))
 print(f"{howmany} random numbers\t {numbers}")
 
-# Iam keeping the original list, maybe I dont need to
+# I am keeping the original list, maybe I dont need to
 topones = numbers.copy()
 
 topones.sort(reverse = True)
-print("The top {tophowmany} are \t\t {topones[0:tophowmany]}")
+print(f"The top {tophowmany} are \t\t {topones[0:tophowmany]}")
