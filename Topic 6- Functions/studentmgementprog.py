@@ -14,12 +14,6 @@ def displaymenu():
 choice = displaymenu()
 print(f"you chose: {choice}")
 '''
-def doadd(students):
-    currentstudent = {}
-    currentstudent["name"] = input("Enter name: ")
-    currentstudent["modules"] = readmodules()
-    students.append(currentstudent)
-
 def readmodules():
     modules = []
     modulename = input("\tEnter the first module name (blank to quit) :").strip()
@@ -34,9 +28,21 @@ def readmodules():
         modulename = input("\tEnter the next module name (blank to quit) :").strip()
     return modules
 
+
+def doadd(students):
+    currentstudent = {}
+    currentstudent["name"] = input("Enter name: ")
+    currentstudent["modules"] = readmodules()
+    students.append(currentstudent)
+
+
 def doview(students):
-    # Fill in later
-    print(students)
+    for student in students:
+        print("student name: ", student["name"])
+        print("modules: ")
+        for module in student["modules"]:
+            print("\tModule name: ", module["name"])
+            print("\tGrade:", module["grade"])
 
 # Main programme
 students = []
@@ -55,7 +61,8 @@ doadd(students)
 doadd(students)
 print(students)
 '''
-
+'''
 students = []
 def readmodules():
     return []
+'''
