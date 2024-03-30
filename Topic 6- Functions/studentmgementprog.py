@@ -28,6 +28,11 @@ def readmodules():
         modulename = input("\tEnter the next module name (blank to quit) :").strip()
     return modules
 
+def displaymodules(modules):
+    print ("\tName  \tGrade")
+    for module in modules:
+        print("\t{} \t{}".format(module["name"], module["grade"]))
+
 
 def doadd(students):
     currentstudent = {}
@@ -37,12 +42,10 @@ def doadd(students):
 
 
 def doview(students):
-    for student in students:
-        print("student name: ", student["name"])
+    for currentstudent in students:
+        print(currentstudent["name"])
         print("modules: ")
-        for module in student["modules"]:
-            print("\tModule name: ", module["name"])
-            print("\tGrade:", module["grade"])
+        displaymodules(currentstudent["modules"]);
 
 # Main programme
 students = []
