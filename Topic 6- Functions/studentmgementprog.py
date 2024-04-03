@@ -6,8 +6,9 @@ def displaymenu():
     print("What would you like to do?")
     print("\t(a) Add new student")
     print("\t(v) View student")
+    print("\t(s) Save student")
     print("\t(q) Quit")
-    choice = input("Type one letter (a/v/q): ").strip()
+    choice = input("Type one letter (a/v/s/q): ").strip()
     return choice 
 # test the function
 '''
@@ -47,6 +48,9 @@ def doview(students):
         print("modules: ")
         displaymodules(currentstudent["modules"]);
 
+def dosave(students):
+    
+
 # Main programme
 students = []
 choice = displaymenu()
@@ -55,6 +59,8 @@ while(choice != 'q'):
         doadd(students)
     elif choice == 'v':
         doview(students)
+    elif choice == 's':
+        dosave(students)    
     elif choice != 'q':
         print("\n\nplease select either a, v or q")
     choice = displaymenu()
