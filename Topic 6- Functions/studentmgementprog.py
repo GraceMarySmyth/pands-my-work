@@ -49,7 +49,14 @@ def doview(students):
         displaymodules(currentstudent["modules"]);
 
 def dosave(students):
-    
+    with open("students.txt", "w") as file:
+        for student in students:
+            file.write(f"Student Name: {student['name']}\n")
+            file.write("Modules:\n")
+            for module in student['modules']:
+                file.write(f"\t{module['name']}: {module['grade']}\n")
+            file.write("\n")
+    print("Student data saved successfully.")
 
 # Main programme
 students = []
